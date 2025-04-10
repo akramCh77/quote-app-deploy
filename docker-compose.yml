@@ -1,0 +1,13 @@
+version: '3'
+services:
+  backend:
+    image: akramch77/quote-backend
+    ports:
+      - "5000:5000"
+
+  frontend:
+    image: akramch77/quote-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
